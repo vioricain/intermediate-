@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sea battle / Game </title>
+    <link rel="stylesheet" href="fall.css">
+</head>
+<body>
+    <header class="l-header">Header</header>
+    <section class="l-content">
+
+        <div class="sea">
+           <div class="wave">
+            </div> 
+           
+    </div>
+    </section>
+    <footer class="l-footer">footer</footer>
+</body>
+</html>
+
+
+
+html {
+  /*  height: 100%;*/
+}
+
+
+body {
+    margin: 0%;
+  /*  height: 100%; */
+}
+
+.l-header {
+    background: #222;
+    height: 20vh;
+}
+.l-content {
+    background: #333;
+    height: 60vh;
+}
+.l-footer {
+    background: #444;
+    height: 20vh;
+}
+
+
+
+
+.sea .wave-bottom {
+   /* border: 1px solid red;*/
+    height: 100px;
+    background-image:
+     radial-gradient(transparent 44%, rgb(1, 1, 62) 45%),
+     linear-gradient( rgb(1, 1, 62),  rgb(1, 1, 62));
+background-position:
+ 0 -35px,
+ 0 35px
+ ;
+background-size: 100px 75px;
+background-repeat: repeat-x;
+}
+
+.sea .wave {
+   /* border: 1px solid red;*/
+    height: 100px;
+    background-color: rgb(1, 1, 62);
+}
+
+
+
+
+
+
+.sea .wave::before {
+    content: "";
+    display: block;
+   /* border: 1px solid green;*/
+    height: 100px;
+    background-image: radial-gradient( rgb(1, 1, 62) 49%, transparent 50%);
+background-position: 50px 40px;
+background-size: 100px 300px;
+background-repeat: repeat-x;
+transform: translateY(0px) }
+
+.sea .wave::after {
+     content: "";
+     display: block;
+     height: 100px;
+     background-image: 
+     radial-gradient(transparent 44%, rgb(1, 1, 62) 45%);
+     linear-gradient( rgb(1, 1, 62),  rgb(1, 1, 62));
+     background-position: 0 -35px, 0 35px;
+ background-size: 100px 75px;
+ background-repeat: repeat-x;
+ 
+
+    
+    
+    }
+
+
+
+
+    /* Also answer the questions:
+1) How does VH differ from VMAX and VMIN css units ?
+2)  What is the main difference between block and inline elements in CSS ? 
+
+1.With fullscreen layouts, the real challenge has always been how to set a proper
+ height value and the "vh" unit gives a brilliant solution for that,but the vmin and vmax units allow  to access
+  the size of the smaller or the larger side of the viewport
+
+2. No matter how you organize  HTML, block-level elements always create a new line.
+ With an inline element, there is never a new line. Therefore, no matter how  organize  inline-elements 
+ in the markup, they will always appear side-by-side.
+
+*/
